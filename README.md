@@ -2,7 +2,10 @@
 docker compose templates for my various applications
 
 For other repos and images checkout
+
 https://github.com/novaspirit/pi-hosted/tree/master/images
+
+https://github.com/ibracorp/templates
 
 ```
 curl -sSL https://get.docker.com | sh || error "Failed to install Docker."
