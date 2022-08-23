@@ -1,0 +1,21 @@
+version: '3.3'
+
+services:
+  homer:
+    container_name: homer
+    restart: unless-stopped
+    image: b4bz/homer:latest
+    ports:
+      - 8080:8080
+    environment:
+      - INIT_ASSETS=1
+    volumes:
+      - ${APP_DIR:?err}/homer/assets:/www/assets
+
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    driver: bridge
+    external: true

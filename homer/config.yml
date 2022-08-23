@@ -1,0 +1,200 @@
+---
+# Homepage configuration
+# See https://fontawesome.com/v5/search for icons options
+
+title: "Home Laboratory"
+subtitle: "Mac Mini Homer"
+logo: "logo.png"
+# icon: "fas fa-skull-crossbones" # Optional icon
+
+header: true
+footer: false
+columns: 3
+connectivityCheck: true
+
+# Optional theme customization
+theme: default
+colors:
+  light:
+    highlight-primary: "#3367d6"
+    highlight-secondary: "#4285f4"
+    highlight-hover: "#5a95f5"
+    background: "#f5f5f5"
+    card-background: "#ffffff"
+    text: "#363636"
+    text-header: "#ffffff"
+    text-title: "#303030"
+    text-subtitle: "#424242"
+    card-shadow: rgba(0, 0, 0, 0.1)
+    link: "#3273dc"
+    link-hover: "#363636"
+  dark:
+    highlight-primary: "#3367d6"
+    highlight-secondary: "#4285f4"
+    highlight-hover: "#5a95f5"
+    background: "#131313"
+    card-background: "#2b2b2b"
+    text: "#eaeaea"
+    text-header: "#ffffff"
+    text-title: "#fafafa"
+    text-subtitle: "#f5f5f5"
+    card-shadow: rgba(0, 0, 0, 0.4)
+    link: "#3273dc"
+    link-hover: "#ffdd57"
+
+# Optional navbar
+# links: [] # Allows for navbar (dark mode, layout, and search) without any links
+links:
+  - name: "edit"
+    icon: "fab fa-github"
+    url: "https://github.com/bastienwirtz/homer"
+    target: "_blank" # optional html a tag target attribute
+  # this will link to a second homer page that will load config from additional-page.yml and keep default config values as in config.yml file
+  # see url field and assets/additional-page.yml.dist used in this example:
+  #- name: "another page!"
+  #  icon: "fas fa-file-alt"
+  #  url: "#additional-page" 
+
+# Services
+# First level array represent a group.
+# Leave only a "items" key if not using group (group name, icon & tagstyle are optional, section separation will not be displayed).
+services:
+  - name: "Media"
+    icon: "fas fa-photo-video"
+    items:
+      - name: "Jellyfin"
+        subtitle: "Media Player System"
+        logo: "assets/tools/jellyfin.png"
+        url: "http://192.168.1.100:8096/"
+        target: "_blank"
+
+      - name: "PodGrab"
+        subtitle: "Podcasts Downloader"
+        logo: "assets/tools/podgrab.png"
+        url: "http://192.168.1.100:8012/"
+        target: "_blank"
+
+      - name: "PhotoPrism"
+        subtitle: "Photo Management and Gallery"
+        logo: "assets/tools/photoprism.png"
+        url: "http://192.168.1.100:8013/"
+        target: "_blank"
+        
+  - name: "Applications"
+    icon: "fas fa-cloud"
+    items:
+      - name: "Portainer"
+        subtitle: "Docker Container Manager"
+        logo: "assets/tools/portainer.png"
+        url: "http://192.168.1.100:9000/#!/2/docker/containers"
+        type: "Portainer"
+        apikey: "ptr_MtLs11USkAAGpVktuOXGNsCGhFjZ/m3FuhhgdZfU7HU="
+        target: "_blank"
+
+      - name: "Whoogle Search"
+        subtitle: "Anonymous Search Engine"
+        logo: "assets/tools/whoogle.png"
+        keywords: "search google"
+        url: "http://192.168.1.100:8020/"
+        target: "_blank" # optional html a tag target attribute
+
+  - name: "Notes"
+    icon: "fas fa-note"
+    items:
+      - name: "Snippet Box"
+        subtitle: "Coding snippet notes"
+        logo: "assets/tools/snippetbox.png"
+        url: "http://192.168.1.100:8003/"
+        target: "_blank"
+
+
+  - name: "Download"
+    icon: "fas fa-download"
+    items:
+      - name: "Transmission-VPN"
+        subtitle: "Torrent Downloader behind a VPN"
+        logo: "assets/tools/transmission.png"
+        url: "http://192.168.1.100:9091/transmission/web/"
+        target: "_blank"
+
+      - name: "Tube Archivist"
+        subtitle: "YouTube Offline Downloader"
+        logo: "assets/tools/tubearchivist.png"
+        url: "http://192.168.1.100:8010/"
+        target: "_blank"
+
+  - name: "Indexers"
+    icon: "fas wand-magic-sparkles"
+    items:
+      - name: "Overseerr"
+        subtitle: "Media Requester for Plex"
+        logo: "assets/tools/overseerr.png"
+        url: "http://192.168.1.100:8006/"
+        target: "_blank"
+
+      - name: "Prowlarr"
+        subtitle: "Indexers Management"
+        logo: "assets/tools/prowlarr.png"
+        url: "http://192.168.1.100:8009/"
+        target: "_blank"
+
+      - name: "Sonarr"
+        subtitle: "TV Show Collection Manager"
+        logo: "assets/tools/sonarr.png"
+        url: "http://192.168.1.100:8006/"
+        target: "_blank"
+
+      - name: "Radarr"
+        subtitle: "Movie Collection Manager"
+        logo: "assets/tools/radarr.png"
+        url: "http://192.168.1.100:7878/"
+        target: "_blank"
+
+      - name: "Lidarr"
+        subtitle: "Music Collection Manager"
+        logo: "assets/tools/lidarr.png"
+        url: "http://192.168.1.100:8004/"
+        target: "_blank"
+
+      - name: "Readarr"
+        subtitle: "Books Collection Manager"
+        logo: "assets/tools/readarr.png"
+        url: "http://192.168.1.100:8007/"
+        target: "_blank"
+
+      - name: "Bazarr"
+        subtitle: "Subtitles Collection"
+        logo: "assets/tools/bazarr.png"
+        url: "http://192.168.1.100:8005/"
+        target: "_blank"
+
+
+  - name: "System"
+    icon: "fas fa-cog"
+    items:
+      - name: "PiHole-mini"
+        subtitle: "Ad Blocker"
+        logo: "assets/tools/pihole.png"
+        url: "http://192.168.1.100:8002/admin/index.php"
+        target: "_blank"
+
+      - name: "PiHole-linode"
+        subtitle: "Ad Blocker"
+        logo: "assets/tools/pihole.png"
+        url: "http://50.116.33.99/admin/index.php"
+        target: "_blank"
+        
+      - name: "PiHole-gcp"
+        subtitle: "Ad Blocker"
+        logo: "assets/tools/pihole.png"
+        url: "http://34.138.56.93/admin/index.php"
+        target: "_blank"
+
+  - name: "Databases"
+    icon: "fas fa-database"
+    items:
+      - name: "Redis"
+        subtitle: "Redis with Insights"
+        logo: "assets/tools/redis.png"
+        url: "http://192.168.1.100:8001/redis-stack/browser"
+        target: "_blank"

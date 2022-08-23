@@ -2,13 +2,13 @@ version: '3'
 services:
   filebrowser:
     container_name: filebrowser
-    image: filebrowser/filebrowser:s6
+    image: filebrowser/filebrowser:latest
     ports:
       - 8002:80
     volumes:
       - ${APP_DIR:?err}/filebrowser/filebrowser.db:/database/filebrowser.db
       - ${APP_DIR:?err}/filebrowser/settings.json:/config/settings.json
-      - ${APP_DIR}:/mnt
+      - ${APP_DIR}:/srv
     labels:
       traefik.enable: true
       traefik.http.routers.filebrowser.entryPoints: https
