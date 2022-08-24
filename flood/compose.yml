@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  flood:
+    container_name: flood
+    restart: unless-stopped
+    image: jesec/flood
+    ports:
+      - 8013:3000
+
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    driver: bridge
+    external: true
